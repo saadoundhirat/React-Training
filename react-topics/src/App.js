@@ -4,6 +4,8 @@ import Welcome from "./components/class-components/Welcome";
 import BindingHandlers from "./components/class-components/BindingHandlers";
 import ConditionalRendering from "./components/class-components/ConditionalRendering";
 import ListRendering from "./components/class-components/ListRendering";
+import RefsDemo from "./components/class-components/RefsDemo";
+import RefParent from "./components/class-components/refTargetChild/RefParent";
 
 function App() {
   return (
@@ -12,7 +14,15 @@ function App() {
       {/*<Welcome/>*/}
       {/*<ConditionalRendering/>*/}
       {/*<BindingHandlers />*/}
-      <ListRendering/>
+      {/*<ListRendering/>*/}
+      {/*<RefsDemo/>*/}
+      {/*<RefParent/>*/}
+      
+      
+      {/**/}
+
+
+
     </div>
   );
 }
