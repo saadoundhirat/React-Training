@@ -1,3 +1,5 @@
+//  we also can use forwarding Refs to achieve the same functionality with react  
+
 import React, { Component } from 'react'
 import RefChild from './RefChild'
 
@@ -7,7 +9,6 @@ export class RefParent extends Component {
     
         this.parentRef = React.createRef()
     }
-    
     childInputHandler = ()=>{
         this.parentRef.current.focusInput()
     }
@@ -23,3 +24,5 @@ export class RefParent extends Component {
 }
 
 export default RefParent
+
+
