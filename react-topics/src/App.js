@@ -19,6 +19,8 @@ import Counter from "./components/class-components/HOC/Counter";
 //  to import user  context
 import CompA from "./components/class-components/context/CompA";
 import { UserProvider } from "./components/class-components/context/Context"
+import GetPost from "./components/class-components/HttpReq/GetPost";
+import PostReq from "./components/class-components/HttpReq/PostReq";
 
 function App() {
   const [userName, setUserName] = useState("saadoun")
@@ -55,9 +57,15 @@ function App() {
       {/*<RenderProps render={(count, incrementCount) => <Counter count={count} incrementCount={incrementCount}/>}/> */}
 
       {/* to use context in react we have to wrap the component with the content provider // the best way to wrap the app component with the context provider  */}
-      <UserProvider value={userName}> 
+      {/* <UserProvider value={userName}> 
         <CompA/>
-      </UserProvider>
+      </UserProvider> */}
+
+      {/* get data using axios */}
+      {/* <GetPost/> */}
+      {/* post data using axios */}
+      <PostReq/>
+
     </div>
   );
 }
