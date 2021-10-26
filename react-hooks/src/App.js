@@ -1,7 +1,7 @@
 import "./App.css";
 import React from 'react'
-import UseStateHook from './components/UseStateHook'
-
+import UseStateHook from './components/useState/UseStateHook'
+import UseStateWithObj from "./components/useState/UseStateWithObj";
 function App() {
   return (
     <div className="App">
@@ -10,7 +10,8 @@ function App() {
       </header>
 
       <main>
-        <UseStateHook name= "saadoun"/>
+        {/* <UseStateHook name= "saadoun"/> */}
+        <UseStateWithObj />
       </main>
     </div>
   );
