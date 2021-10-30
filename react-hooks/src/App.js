@@ -1,45 +1,32 @@
-import "./App.css";
-import React from "react";
-import UseStateHook from "./components/useState/UseStateHook";
-import UseStateWithObj from "./components/useState/UseStateWithObj";
-import UseEffectBasic from "./components/useEffect/UseEffectBasic";
-import UseEffectFitchData from "./components/useEffect/UseEffectFitchData";
-
-/* to use useContext in react context  */
-// import ContextA from "./components/useContext/ContextA";
-// export const userContext = React.createContext();
-
-/* useReducer hook  */
-import UseReducer from './components/useReducer/UseReducer'
+// search about useImmer hooks when using reducers 
+import React, { useReducer } from "react";
+import UseReducerCompA from "./components/useReducer/UseReducerCompA";
 
 
-function App() {
+/* how to use useReducer with useContext */
+export const UserContext = React.createContext();
+const initState = 0;
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    default:
+      return state;
+  }
+};
+
+const App = () => {
+  const [currState, dispatch] = useReducer(reducer, initState);
   return (
-    <div className="App">
-      <header>
-        <h1>React hooks training </h1>
-      </header>
-
-      <main>
-        {/* ================= useState Comp =================*/}
-        {/* <UseStateHook name= "saadoun"/> */}
-        {/* <UseStateWithObj /> */}
-
-        {/* ================= useEffect Comp =================*/}
-        {/* <UseEffectBasic/> */}
-        {/* <UseEffectFitchData/> */}
-
-        {/* ================= useContext Comp =================*/}
-        {/* <userContext.provider value={"saadoun"}>
-          <ContextA />
-        </userContext.provider> */}
-        
-        {/* ================= useReducer Comp =================*/}
-        <UseReducer />
-
-      </main>
-    </div>
+    <UserContext.Provider value={{ state: currState, dispatchFn: dispatch }}>
+      <React.Fragment>
+        <UseReducerCompA />
+      </React.Fragment>
+    </UserContext.Provider>
   );
-}
+};
 
 export default App;
