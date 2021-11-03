@@ -5,7 +5,7 @@ type Props = {
     usersList: {
         firstName: string,
         lastName: string,
-    }[]
+    }[],
 }
 export const PassProps = ({ name, usersList }: Props) => {
     return (
