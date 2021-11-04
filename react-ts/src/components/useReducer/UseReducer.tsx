@@ -13,12 +13,10 @@ type ResetAction = {
 }
 type Action = UpdateAction | ResetAction
 
-
-type State = {
-    counter: number;
+interface State {
+    counter: number
 }
-
-const initState = {
+const initState: State = {
     counter: 0,
 }
 
