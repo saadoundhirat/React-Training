@@ -1,7 +1,7 @@
 import { FC, useState } from 'react'
 import './App.css';
 import { UseThemeComp } from './components/useContext/themeContext/UseThemeComp';
-import { ThemeContextProvider } from './components/useContext/themeContext/ThemeContext';
+import { ThemeContextProvider } from './components/useContext/themeContext/ThemeContextProvider';
 
 const App: FC = () => {
   return (

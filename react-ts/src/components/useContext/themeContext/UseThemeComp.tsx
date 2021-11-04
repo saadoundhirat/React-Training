@@ -1,15 +1,13 @@
 import React, { useContext } from 'react'
-import { ThemeContextProvider } from './ThemeContext';
+import { ThemeContext } from './ThemeContextProvider';
 
-interface UseThemeComProps {
 
-}
 
-export const UseThemeComp: React.FC<UseThemeComProps> = ({}) => {
-        const theme = useContext(ThemeContextProvider)
+export const UseThemeComp: React.FC = () => {
+        const theme = useContext(ThemeContext)
         return (
                 <>
-                <h2 style={{color: "theme.primary.text"}}> the text is using theme </h2>
+                        <h2 style={{ backgroundColor: theme.secondary.text }}> the text is using the provided theme </h2>
                 </>
         );
 }
