@@ -1,14 +1,13 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import './App.css';
-import { UseThemeComp } from './components/useContext/themeContext/UseThemeComp';
-import { ThemeContextProvider } from './components/useContext/themeContext/ThemeContextProvider';
-
+import { UserContextProvider } from './components/useContext/userContext/UserContextProvider';
+import { User } from './components/useContext/userContext/User'
 const App: FC = () => {
   return (
     <div className="App">
-      <ThemeContextProvider>
-        <UseThemeComp />
-      </ThemeContextProvider>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
